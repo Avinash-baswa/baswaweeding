@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="header"><h1>ALBUM</h1></div>
+<div class="gallery">
+  <span style="--i:1">
+
+    <img style="img" src="album/img1.jpg" alt="" />
+  </span>
+  <span style="--i:2">
+    <img src="album/img2.jpg" alt="" />
+  </span>
+  <span style="--i:3">
+    <img src="album/img8.jpg" alt="" />
+  </span>
+  <span style="--i:4">
+    <img src="album/img3.jpg" alt="" />
+  </span>
+  <span style="--i:5">
+    <img src="album/img4.jpg" alt="" />
+  </span>
+  <span style="--i:6">
+    <img src="album/img5.jpg" alt="" />
+  </span>
+  <span style="--i:7">
+    <img src="album/img6.jpg" alt="" />
+  </span>
+  <span style="--i:8">
+    <img src="album/img7.jpg" alt="" />
+  </span>
+</div>
+<div class="button">
+  <div class="set">
+    <a class="a" href=""><div class="border"> <img class="b1" src="assets/a.png"> <h1 class="text">నిశ్చితార్థం</h1> </div> </a>
+      <a class="a" href=""><div class="border"> <img class="b1" src="assets/b.png"> <h1 class="text">పసుపులో&nbsp;<br></br>పొట్టువేయడం</h1> </div> </a>
+        </div>
+    <div class="set">
+   <a class="a" href=""><div class="border"> <img class="b1" src="assets/c.png"> <h1 class="text">పెళ్లికొడుకుని <br></br>చాయటం</h1> </div> </a>
+   <a class="a" href=""><div class="border"> <img class="b1" src="assets/d.png"> <h1 class="text">పహల్దీ</h1> </div> </a>
+
+    </div>
+    <div class="set">
+   <a class="a" href=""><div class="border"> <img class="b1" src="assets/e.png"> <h1 class="text">పెండ్లిv</h1> </div> </a>
+        <a class="a" href=""><div class="border"> <img class="b1" src="assets/f.png"> <h1 class="text">రిసెప్షన్ రిసెప్షన్ </h1> </div> </a>
+
+    </div>
+</div>
+</body>
+<style>
+.header{
+position:relative;
+left:-400px;
+top:-250px;
+font-size:65px;
+color:gold;
+text-shadow:5px 5px 10px black;
+<!-- background-color:white;-->
+
+
+}
+.set{
+display:flex;
+.a{
+text-decoration: none;}
+}
+.text{
+position:relative;
+left:200px;
+top:-100px;
+text-decoration: none;
+color:gold;
+font-size:50px;
+text-align:left;
+text-shadow:5px 5px 10px black;
+
+}
+.border{
+<!--background-color:red;-->
+items-align:center;
+}
+.b1{
+width:400px;
+height:400px;
+<!--background-color: green;-->
+margin-right:100px;
+margin-left:100px;
+margin-bottom:100px;
+border-radius:30px;
+filter: drop-shadow(5px 5px 10px #222);
+}
+
+.button{
+width:1000px;
+height:1000px;
+position:absolute;
+top:1500px;
+left:-360px;
+<!--background-color: pink;-->
+<!---->
+
+}
+
+
+
+    body{
+
+  margin:0;
+  width:1080px;
+  height:1920px;
+  display:grid;
+  place-items:center;
+  position:absolute;
+  left:60%;
+  top:-600px;
+  background-color:#393e46;
+}
+
+
+.gallery{
+   position:absolute;
+   left:-15px;
+   top:1000px;
+  width:300px;
+  height:200px;
+  transform-style:preserve-3d;
+  animation:rotate 35s linear infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform:perspective(1200px) rotateY(0deg);
+  }
+
+  to{
+    transform:perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery span{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform-origin:center;
+  transform-style:preserve-3d;
+  transform:rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+
+}
+
+.gallery span img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  box-shadow: 5px 5px 10px gold;
+}
+.img{
+filter: drop-shadow(5px 5px 5px #222)
+
+}
+</style>
+</html>
